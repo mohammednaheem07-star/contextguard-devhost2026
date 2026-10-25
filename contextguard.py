@@ -16,10 +16,12 @@ PATTERNS = {
 TITLE_NAME = re.compile(r"\b(?:Mr|Mrs|Ms|Dr|Prof)\.?\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?")
 TWO_CAPS = re.compile(r"\b[A-Z][a-z]{2,}\s+[A-Z][a-z]{2,}\b")
 NAME_CUE = re.compile(
-    r"\b([A-Z][a-z]{2,})(?='s\b|\s+(?:earns|earned|joined|resigned|was|is|has|got|will|salary|package|offer))")
+    r"\b([A-Z][a-z]{2,})(?='s\b|\s+(?:earns|earned|joined|resigned|salary|package|offer))")
 NOT_NAMES = {"The","This","That","Our","Send","Please","Summarise","Summarize","Share","We","Team",
              "Human","Resources","Data","Privacy","New","Project","Hello","Dear","Thanks","Regards",
-             "Annual","Press","Release","Company","Policy","Office","Board","Meeting","Customer","Bank"}
+             "Annual","Press","Release","Company","Policy","Office","Board","Meeting","Customer","Bank",
+             "Aadhaar","Aadhar","Pan","Ifsc","Mail","Write","Transfer","Account","Salary","Email",
+             "Phone","Mobile","Number","Please","Verify","Employee","Manager","Our","Her","His"}
 
 try:  # optional: better names if spaCy model is installed
     import spacy
